@@ -1,0 +1,23 @@
+{
+  "name": "spring-boot-github-api",
+  "version": "1.0.0",
+  "description": "Spring boot github API ===",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "bower install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicojs/spring-boot-github-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nicojs/spring-boot-github-api/issues"
+  },
+  "homepage": "https://github.com/nicojs/spring-boot-github-api#readme",
+  "devDependencies": {
+    "bower": "^1.7.9"
+  }
+}
