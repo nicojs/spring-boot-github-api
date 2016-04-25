@@ -18,7 +18,7 @@ public class RepositoriesController {
     @Autowired
     private RestTemplate restTemplate;
 
-    @RequestMapping("/repositories")
+    @RequestMapping("/api/repositories")
     public List<Repository> repositories(@RequestParam(name = "q") String query) {
         ResponseEntity<GitHubRepositoriesResponse> forEntity =
                 restTemplate.getForEntity(String.format("https://api.github.com/search/repositories?q=%s", query), GitHubRepositoriesResponse.class);

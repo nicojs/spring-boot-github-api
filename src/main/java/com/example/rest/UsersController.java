@@ -11,12 +11,12 @@ import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 
-@RestController
+@RestController()
 public class UsersController {
     @Autowired
     private RestTemplate restTemplate;
 
-    @RequestMapping("/users")
+    @RequestMapping("/api/users")
     public List<User> repositories(@RequestParam(name = "q") String query) {
         ResponseEntity<GitHubUsersResponse> forEntity =
                 restTemplate.getForEntity(String.format("https://api.github.com/search/users?q=%s", query), GitHubUsersResponse.class);
