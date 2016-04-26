@@ -19,9 +19,7 @@
 <h2>Repositories</h2>
 <div class="row">
     <div class="col-md-12">
-        <ul ng-repeat="repository in ctrl.repositories">
-            <li><a ng-href="{{repository.url}}" target="_blank">{{repository.name}}</a></li>
-        </ul>
+        <repositories-table repositories="ctrl.repositories"></repositories-table>
     </div>
 </div>
 <h2>Users</h2>

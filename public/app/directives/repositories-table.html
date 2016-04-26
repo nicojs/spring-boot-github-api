@@ -1,0 +1,10 @@
+<table class="table">
+    <tr>
+        <th>Name</th>
+        <th>Owner</th>
+    </tr>
+    <tr ng-repeat="repository in repositories">
+        <td>{{repository.name}}</td>
+        <td><a href="#/users/{{repository.owner.login}}">{{repository.owner.login}}</a></td>
+    </tr>
+</table>
