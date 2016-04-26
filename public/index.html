@@ -9,45 +9,12 @@
     <script src="app/services/repositories.service.js"></script>
     <script src="app/services/users.service.js"></script>
     <script src="app/controllers/Main.controller.js"></script>
+    <script src="app/controllers/Users.controller.js"></script>
 </head>
 
 <body>
-<div class="container" ng-app="githubProxy" ng-controller="Main as ctrl">
-    <div class="row">
-        <div class="col-md-12">
-            <h1>Searching: {{ctrl.searchPattern}}</h1>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="searchInput">Search repositories</label>
-                <input id="searchInput" class="form-control" type="text" ng-model="ctrl.searchPattern">
-            </div>
-            <div class="form-group">
-                <button type="button" class="form-control" ng-click="ctrl.searchClicked($event)">
-                    Search!
-                </button>
-            </div>
-        </div>
-    </div>
-    <h2>Repositories</h2>
-    <div class="row">
-        <div class="col-md-12">
-            <ul ng-repeat="repository in ctrl.repositories">
-                <li><a ng-href="{{repository.url}}" target="_blank">{{repository.name}}</a></li>
-            </ul>
-        </div>
-    </div>
-    <h2>Users</h2>
-    <div class="row">
-        <div class="col-md-12">
-            <ul ng-repeat="user in ctrl.users">
-                <li><a ng-href="{{user.url}}" target="_blank"><img ng-src="{{user.avatarUrl}}"></a></li>
-            </ul>
-        </div>
-    </div>
-
+<div class="container" ng-app="githubProxy">
+    <ng-view></ng-view>
 </div>
 </body>
 </html>
